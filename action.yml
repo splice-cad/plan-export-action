@@ -1,0 +1,39 @@
+name: Splice Plan Export
+description: Render splice plan JSONs as PDF, XLSX, and CSV exports.
+author: splice-cad
+
+branding:
+  icon: file-text
+  color: blue
+
+inputs:
+  plan-path:
+    description: >-
+      Path to the plan JSON (relative to the repo root). If omitted, falls back
+      to the `design.plan-path` field in `splice.yml`.
+    required: false
+    default: ''
+  output-dir:
+    description: >-
+      Directory for rendered outputs (relative to the repo root). Defaults to
+      `exports.output-dir` in `splice.yml`, or `rendered/` if neither is set.
+    required: false
+    default: ''
+  only:
+    description: >-
+      Comma-separated export targets. Valid values:
+        all-pages-pdf, bom-csv, bom-xlsx, bom-pdf, connection-table-xlsx, icd-pdf
+      If omitted, falls back to `exports.formats` in `splice.yml`, or all
+      targets.
+    required: false
+    default: ''
+
+outputs:
+  files:
+    description: Newline-separated list of rendered file paths.
+
+runs:
+  using: docker
+  # Floats to the latest v0.x image. Pin to a specific version (e.g. :v0.1.0)
+  # if you need reproducible renders across tag bumps.
+  image: docker://ghcr.io/splice-cad/plan-export-action:v0

@@ -1,0 +1,23 @@
+# Attaches rendered outputs to GitHub Releases on tag push.
+# - Fires only when a version tag (v*) is pushed.
+# - Rendered files become release assets — downloadable from the release page.
+# - Perfect for frozen manufacturing handoff artifacts.
+name: Release rendered plans
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: write
+
+jobs:
+  render-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: splice-cad/plan-export-action@v0
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: rendered/*
+          generate_release_notes: true

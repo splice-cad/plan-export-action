@@ -1,0 +1,19 @@
+# splice.yml — put this at the root of your repo.
+# The action reads this file to know what plan to render and what exports to produce.
+
+design:
+  # Path to the plan JSON (relative to the repo root).
+  plan-path: plans/main.plan.json
+
+exports:
+  # Which exports to produce. Omit to render all.
+  formats:
+    - all-pages-pdf
+    - bom-xlsx
+    - bom-csv
+    # - bom-pdf
+    # - connection-table-xlsx
+    # - icd-pdf
+
+  # Where to write outputs. Defaults to "rendered" if omitted.
+  output-dir: rendered

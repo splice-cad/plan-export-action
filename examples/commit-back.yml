@@ -1,0 +1,35 @@
+# Commits rendered outputs back to the repo.
+# - Maintains a git history of every render.
+# - [skip ci] in the commit message prevents an infinite re-render loop.
+# - Diff check skips empty "no changes" commits.
+name: Render plan
+
+on:
+  push:
+    paths:
+      - 'plans/**'
+      - 'splice.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: splice-cad/plan-export-action@v0
+
+      - name: Commit rendered outputs
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add rendered/
+          if git diff --staged --quiet; then
+            echo "No changes to rendered/"
+          else
+            git commit -m "chore: update rendered outputs [skip ci]"
+            git push
+          fi

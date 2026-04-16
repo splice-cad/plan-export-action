@@ -1,0 +1,14 @@
+# splice.yml variant — renders every export type.
+
+design:
+  plan-path: plans/main.plan.json
+
+exports:
+  formats:
+    - all-pages-pdf
+    - bom-csv
+    - bom-xlsx
+    - bom-pdf
+    - connection-table-xlsx
+    - icd-pdf
+  output-dir: rendered

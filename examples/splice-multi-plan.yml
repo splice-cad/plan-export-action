@@ -1,0 +1,17 @@
+# splice.yml variant — for repos with multiple plan files.
+# Each plan gets its own output subdirectory.
+# Use with the matrix workflow example (examples/multi-plan.yml).
+#
+# Note: when using the matrix workflow pattern, plan-path is passed as an
+# action input per matrix entry, so design.plan-path here is optional.
+# This file still declares the shared export formats and output root.
+
+design:
+  plan-path: plans/main-harness.plan.json
+
+exports:
+  formats:
+    - all-pages-pdf
+    - bom-xlsx
+    - connection-table-xlsx
+  output-dir: rendered

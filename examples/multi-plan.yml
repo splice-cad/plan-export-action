@@ -1,0 +1,33 @@
+# Render multiple plans in one workflow using a matrix strategy.
+# Each plan gets its own output directory and artifact.
+name: Render all plans
+
+on:
+  push:
+    paths:
+      - 'plans/**'
+      - 'splice.yml'
+  workflow_dispatch:
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        plan:
+          - main-harness
+          - sub-harness-a
+          - sub-harness-b
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: splice-cad/plan-export-action@v0
+        with:
+          plan-path: plans/${{ matrix.plan }}.plan.json
+          output-dir: rendered/${{ matrix.plan }}
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: rendered-${{ matrix.plan }}
+          path: rendered/${{ matrix.plan }}
+          if-no-files-found: error

@@ -1,0 +1,893 @@
+{
+  "assemblyRefs": {},
+  "bom": [
+    {
+      "datasheet_url": "https://tools.molex.com/pdm_docs/ps/PS-43650.pdf",
+      "description": "CONN RCPT HSG 4POS 3.00MM",
+      "id": "bom_1772410078188_zgkwuo5jo",
+      "img_url": "//mm.digikey.com/Volume0/opasdata/d220001/medias/images/1057/43645-0400.jpg",
+      "manufacturer": "Molex",
+      "mpn": "0436450408",
+      "sourcePartId": "22812658-719a-484d-9ec9-be787678c3e5",
+      "spec": {
+        "gender": "female",
+        "positions": 4,
+        "rows": 1,
+        "series": "Micro-Fit 3.0 43645",
+        "shape": "rectangular"
+      },
+      "type": "connector"
+    },
+    {
+      "id": "bom_1772410234028_y8lxozmhp",
+      "manufacturer": "Igus",
+      "mpn": "0200",
+      "sourcePartId": "3b844e3d-7a08-4321-8a0d-27e1265fe20c",
+      "spec": {
+        "conductorCount": 4
+      },
+      "type": "cable"
+    },
+    {
+      "description": "Category 6 Ethernet Cable (8 conductors)",
+      "id": "bom_1773527804437_0agym8lsm",
+      "manufacturer": "Generic",
+      "mpn": "CAT6",
+      "sourcePartId": "9793edc2-5586-47f6-a832-be0c1f95d008",
+      "spec": {
+        "conductorCount": 8,
+        "cores": [
+          {
+            "awg": 24,
+            "core_no": 1
+          },
+          {
+            "awg": 24,
+            "core_no": 2
+          },
+          {
+            "awg": 24,
+            "core_no": 3
+          },
+          {
+            "awg": 24,
+            "core_no": 4
+          },
+          {
+            "awg": 24,
+            "core_no": 5
+          },
+          {
+            "awg": 24,
+            "core_no": 6
+          },
+          {
+            "awg": 24,
+            "core_no": 7
+          },
+          {
+            "awg": 24,
+            "core_no": 8
+          }
+        ]
+      },
+      "type": "cable"
+    },
+    {
+      "datasheet_url": "https://tools.molex.com/pdm_docs/ps/PS-44300-001.pdf",
+      "description": "CONN SOCKET 20-24AWG CRIMP TIN",
+      "id": "bom_1774025299095_upqvw6j27",
+      "manufacturer": "Molex",
+      "mpn": "0430300007",
+      "sourcePartId": "3c17934b-53f3-4bc5-8251-23b3a2a2653b",
+      "spec": {
+        "gender": "female",
+        "terminal": {
+          "gender": "female",
+          "plating": "Tin",
+          "wire_awg_max": 24,
+          "wire_awg_min": 20
+        }
+      },
+      "type": "contact"
+    },
+    {
+      "datasheet_url": "https://www.molex.com/en-us/products/part-detail/430300038?display=pdf",
+      "description": "CONN SOCKET 18AWG CRIMP TIN",
+      "id": "bom_1774025502286_x4ouww89n",
+      "manufacturer": "Molex",
+      "mpn": "0430300038",
+      "sourcePartId": "c757d888-dc2e-4ac2-a009-4b5eade858d6",
+      "spec": {
+        "gender": "female",
+        "terminal": {
+          "gender": "female",
+          "plating": "Tin",
+          "wire_awg_max": 18,
+          "wire_awg_min": 18
+        }
+      },
+      "type": "contact"
+    },
+    {
+      "datasheet_url": "https://www.molex.com/en-us/products/part-detail/2039510001?display=pdf",
+      "description": "MICROFIT 3.0 RMF FEM CRP TERM 1",
+      "id": "bom_1774025507878_65qtt07gm",
+      "manufacturer": "Molex",
+      "mpn": "2039510001",
+      "sourcePartId": "58ac991c-954e-4e89-9353-8f4238e1d818",
+      "spec": {
+        "terminal": {
+          "gender": "female",
+          "plating": "Tin",
+          "wire_awg_max": 18,
+          "wire_awg_min": 18
+        }
+      },
+      "type": "contact"
+    }
+  ],
+  "cables": {
+    "587bd531-47ae-4219-91d3-8f0f2684a08f": {
+      "bomEntryId": "bom_1773527804437_0agym8lsm",
+      "cableName": "Cable 1",
+      "coreMappings": [
+        {
+          "conductorId": "cond_1772409983131_8hui2hu02",
+          "coreNumber": 1
+        },
+        {
+          "conductorId": "cond_1772409983131_6pdolhms0",
+          "coreNumber": 2
+        },
+        {
+          "conductorId": "cond_1772409983132_pgnne19fh",
+          "coreNumber": 3
+        },
+        {
+          "conductorId": "cond_1772409983131_g8h31hzl7",
+          "coreNumber": 4
+        }
+      ],
+      "id": "587bd531-47ae-4219-91d3-8f0f2684a08f",
+      "linkId": "link_1774797538553_9bx56y37r",
+      "shieldConductorId": "cond_1773528098592_2yrxu9ep3",
+      "shielded": false
+    }
+  },
+  "conductorSplices": {},
+  "conductors": {
+    "cond_1772409983131_6pdolhms0": {
+      "color": "#FF0000",
+      "endEndpoint": {
+        "nodeId": "comp_1772404410835_axqoa1a4i",
+        "pinId": "pin_1772404410836_jcozhdlfi"
+      },
+      "gauge": "22 AWG",
+      "id": "cond_1772409983131_6pdolhms0",
+      "linkPath": [
+        "link_1774797538553_9bx56y37r"
+      ],
+      "netName": "2",
+      "startEndpoint": {
+        "nodeId": "comp_1772404313028_2zpu2zohk",
+        "pinId": "pin-3f68bd3c"
+      }
+    },
+    "cond_1772409983131_8hui2hu02": {
+      "color": "#000000",
+      "endEndpoint": {
+        "nodeId": "comp_1772404410835_axqoa1a4i",
+        "pinId": "pin_1772404410836_m83frqtlc"
+      },
+      "gauge": "22 AWG",
+      "id": "cond_1772409983131_8hui2hu02",
+      "linkPath": [
+        "link_1774797538553_9bx56y37r"
+      ],
+      "netName": "1",
+      "startEndpoint": {
+        "nodeId": "comp_1772404313028_2zpu2zohk",
+        "pinId": "pin-54b197a4"
+      }
+    },
+    "cond_1772409983131_g8h31hzl7": {
+      "color": "#0000FF",
+      "endEndpoint": {
+        "nodeId": "comp_1772404410835_axqoa1a4i",
+        "pinId": "pin_1772404410836_s3dzlmua9"
+      },
+      "gauge": "22 AWG",
+      "id": "cond_1772409983131_g8h31hzl7",
+      "linkPath": [
+        "link_1774797538553_9bx56y37r"
+      ],
+      "netName": "3",
+      "startEndpoint": {
+        "nodeId": "comp_1772404313028_2zpu2zohk",
+        "pinId": "pin-2006e8fc"
+      }
+    },
+    "cond_1772409983132_pgnne19fh": {
+      "color": "#00FF00",
+      "endEndpoint": {
+        "nodeId": "comp_1772404410835_axqoa1a4i",
+        "pinId": "pin_1772404410836_q8r2vxcn5"
+      },
+      "gauge": "22 AWG",
+      "id": "cond_1772409983132_pgnne19fh",
+      "linkPath": [
+        "link_1774797538553_9bx56y37r"
+      ],
+      "netName": "4",
+      "startEndpoint": {
+        "nodeId": "comp_1772404313028_2zpu2zohk",
+        "pinId": "pin-749d6a2f"
+      }
+    }
+  },
+  "deviceGroups": [
+    {
+      "collapsed": false,
+      "id": "dg_1772410377285_7xrog1ypw",
+      "name": "PCB1",
+      "nodeIds": [
+        "comp_1772410362968_4ql8k6j5g"
+      ]
+    }
+  ],
+  "drcDismissals": {},
+  "linkPageAssignments": {
+    "link_1772409983131_8yko8saqh": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "link_1772589328396_0x67bby6a": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "link_1772987184919_5x9a9as37": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "link_1772987184919_coy3fezej": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "link_1772987184919_wqvjdl0ht": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "link_1774098354691_5oq3szsz5": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "link_1774310201635_85zx21b6s": [],
+    "link_1774310201635_ddx6t69oa": [],
+    "link_1774310201635_ehamz6fi6": [],
+    "link_1774310201635_hnr599bce": [],
+    "link_1774310201635_qzpgj900k": [],
+    "link_1774310287043_763pomt8t": [],
+    "link_1774310287043_ac8620x19": [],
+    "link_1774310287043_opanbwwv9": [],
+    "link_1774310287043_q1qysx5wb": [],
+    "link_1774310287043_topo58mc8": [],
+    "link_1774313516905_1vyrayjjo": [],
+    "link_1774313516905_lkn53js1f": [],
+    "link_1774313516905_ta5cqc5zl": [],
+    "link_1774313516905_xmhsz2obi": [],
+    "link_1774313516905_xybiqfbtk": [],
+    "link_1774313545450_92inrzwvr": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "link_1774313545450_9ftgl10uz": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "link_1774313545450_k00ypcsfn": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "link_1774313545450_vqyxlg1ns": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "link_1774313545450_ztq0zzzkd": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "link_1774797538553_9bx56y37r": [
+      "page_1772404124436_wc6s6mz3r"
+    ]
+  },
+  "linkPageGeometry": {},
+  "links": {
+    "link_1774797538553_9bx56y37r": {
+      "id": "link_1774797538553_9bx56y37r",
+      "sourceNodeId": "comp_1772404313028_2zpu2zohk",
+      "targetNodeId": "comp_1772404410835_axqoa1a4i",
+      "pathStyle": "straight"
+    }
+  },
+  "mates": [
+    {
+      "connector1Id": "comp_1772410362968_4ql8k6j5g",
+      "connector2Id": "comp_1772404313028_2zpu2zohk",
+      "id": "mate_1772410436773_rujdirnvr",
+      "mateType": "inline",
+      "pinMappings": [
+        {
+          "pin1Id": "pin-515c56d7",
+          "pin2Id": "pin-54b197a4"
+        },
+        {
+          "pin1Id": "pin-2bb1372f",
+          "pin2Id": "pin-3f68bd3c"
+        },
+        {
+          "pin1Id": "pin-6e172552",
+          "pin2Id": "pin-2006e8fc"
+        },
+        {
+          "pin1Id": "pin-aba43718",
+          "pin2Id": "pin-749d6a2f"
+        }
+      ]
+    }
+  ],
+  "nets": {
+    "1": {
+      "displayName": "GND",
+      "name": "1",
+      "signalId": "sig_1772409989781_2sebtkubb"
+    },
+    "2": {
+      "displayName": "3V3",
+      "name": "2",
+      "signalId": "sig_1772409989997_r76igzlnv"
+    },
+    "3": {
+      "displayName": "TX",
+      "name": "3",
+      "signalId": "sig_1772409990181_tqcfd62e3"
+    },
+    "4": {
+      "displayName": "RX",
+      "name": "4",
+      "signalId": "sig_1772409990405_rdn9eo11w"
+    },
+    "NET_mig_mn2jkl84_1": {
+      "displayName": "NET_mig_mn2jkl84_1",
+      "name": "NET_mig_mn2jkl84_1"
+    },
+    "NET_mig_mn2jkl84_2": {
+      "displayName": "NET_mig_mn2jkl84_2",
+      "name": "NET_mig_mn2jkl84_2"
+    },
+    "NET_mig_mn3whd23_1": {
+      "displayName": "3V3",
+      "name": "NET_mig_mn3whd23_1",
+      "signalId": "sig_1772409989997_r76igzlnv"
+    },
+    "NET_mig_mn3whd23_2": {
+      "displayName": "GND",
+      "name": "NET_mig_mn3whd23_2",
+      "signalId": "sig_1772409989781_2sebtkubb"
+    },
+    "NET_mm9c8hmq": {
+      "name": "NET_mm9c8hmq"
+    },
+    "NET_mm9c8jhd": {
+      "name": "NET_mm9c8jhd"
+    },
+    "NET_mm9c9zrn": {
+      "name": "NET_mm9c9zrn"
+    },
+    "NET_mm9ca18o": {
+      "name": "NET_mm9ca18o"
+    }
+  },
+  "nodePageAssignments": {
+    "bp_1772987184919_5v43gkgzx": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "bp_1774310201635_f9zgh104v": [],
+    "bp_1774310201635_m2hsvtdur": [],
+    "bp_1774310287043_snbxggk6z": [],
+    "bp_1774310287043_wvmxgh2k5": [],
+    "bp_1774313516905_imhu8ne3o": [],
+    "bp_1774313516905_q58jcxe9m": [],
+    "bp_1774313545450_45ywu9awy": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "bp_1774313545450_6u428pzxl": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "comp_1772404289586_iejh3fo9m": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "comp_1772404313028_2zpu2zohk": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "comp_1772404410835_axqoa1a4i": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "comp_1772410362968_4ql8k6j5g": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "comp_1772587909676_i25usbwky": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "comp_1774025289580_esfjhr5p3": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "comp_1774310201634_0y0va4nda": [],
+    "comp_1774310201634_8gidfnb5t": [],
+    "comp_1774310201634_b5sm5uhl6": [],
+    "comp_1774310201634_wyc46bv8t": [],
+    "comp_1774310287042_6bnjcfzn8": [],
+    "comp_1774310287042_mj12mmvi0": [],
+    "comp_1774310287042_q89295y5j": [],
+    "comp_1774310287042_ugc1yh0k1": [],
+    "comp_1774313516904_btafypzsv": [],
+    "comp_1774313516905_j9ewwyct9": [],
+    "comp_1774313516905_jsmo082mw": [],
+    "comp_1774313516905_l1qjs7fq3": [],
+    "comp_1774313545450_1vorayt5j": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "comp_1774313545450_6tceniqpx": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "comp_1774313545450_93zpsaj96": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "comp_1774313545450_q3lmej84a": [
+      "page_1772404124436_wc6s6mz3r"
+    ],
+    "comp_1774354595111_l3eyjvbaw": [
+      "page_1772404124436_wc6s6mz3r"
+    ]
+  },
+  "nodePagePositions": {
+    "comp_1772404313028_2zpu2zohk": {
+      "page_1772404124436_wc6s6mz3r": {
+        "x": 205,
+        "y": 445
+      }
+    },
+    "comp_1772404410835_axqoa1a4i": {
+      "page_1772404124436_wc6s6mz3r": {
+        "x": 543,
+        "y": 445
+      }
+    },
+    "comp_1772410362968_4ql8k6j5g": {
+      "page_1772404124436_wc6s6mz3r": {
+        "x": -25,
+        "y": 445
+      }
+    },
+    "comp_1774354595111_l3eyjvbaw": {
+      "page_1772404124436_wc6s6mz3r": {
+        "x": 353,
+        "y": 235
+      }
+    }
+  },
+  "nodePageSizes": {
+    "comp_1772404313028_2zpu2zohk": {
+      "page_1772404124436_wc6s6mz3r": {
+        "height": 40,
+        "width": 150
+      }
+    },
+    "comp_1772404410835_axqoa1a4i": {
+      "page_1772404124436_wc6s6mz3r": {
+        "height": 40,
+        "width": 185
+      }
+    },
+    "comp_1772410362968_4ql8k6j5g": {
+      "page_1772404124436_wc6s6mz3r": {
+        "height": 40,
+        "width": 140
+      }
+    }
+  },
+  "nodes": {
+    "comp_1772404313028_2zpu2zohk": {
+      "bomEntryId": "bom_1772410078188_zgkwuo5jo",
+      "id": "comp_1772404313028_2zpu2zohk",
+      "label": "X1",
+      "pins": [
+        {
+          "function": "MISO",
+          "id": "pin-54b197a4",
+          "label": "1"
+        },
+        {
+          "function": "other",
+          "id": "pin-3f68bd3c",
+          "label": "2"
+        },
+        {
+          "function": "other",
+          "id": "pin-2006e8fc",
+          "label": "3"
+        },
+        {
+          "function": "other",
+          "id": "pin-749d6a2f",
+          "label": "4"
+        }
+      ],
+      "position": {
+        "x": 200,
+        "y": 445
+      },
+      "shape": "rectangular",
+      "size": {
+        "height": 40,
+        "width": 150
+      },
+      "type": "component"
+    },
+    "comp_1772404410835_axqoa1a4i": {
+      "bomEntryId": "bom_1772410078188_zgkwuo5jo",
+      "id": "comp_1772404410835_axqoa1a4i",
+      "label": "X2",
+      "pins": [
+        {
+          "function": "other",
+          "id": "pin_1772404410836_m83frqtlc",
+          "label": "1"
+        },
+        {
+          "function": "other",
+          "id": "pin_1772404410836_jcozhdlfi",
+          "label": "2"
+        },
+        {
+          "function": "other",
+          "id": "pin_1772404410836_s3dzlmua9",
+          "label": "3"
+        },
+        {
+          "function": "other",
+          "id": "pin_1772404410836_q8r2vxcn5",
+          "label": "4"
+        }
+      ],
+      "position": {
+        "x": 530,
+        "y": 447.5
+      },
+      "shape": "rectangular",
+      "size": {
+        "height": 65,
+        "width": 150
+      },
+      "type": "component"
+    },
+    "comp_1772410362968_4ql8k6j5g": {
+      "id": "comp_1772410362968_4ql8k6j5g",
+      "label": "X3",
+      "pins": [
+        {
+          "function": "other",
+          "id": "pin-515c56d7",
+          "label": "1"
+        },
+        {
+          "function": "other",
+          "id": "pin-2bb1372f",
+          "label": "2"
+        },
+        {
+          "function": "other",
+          "id": "pin-6e172552",
+          "label": "3"
+        },
+        {
+          "function": "other",
+          "id": "pin-aba43718",
+          "label": "4"
+        }
+      ],
+      "position": {
+        "x": -25,
+        "y": 445
+      },
+      "shape": "rectangular",
+      "size": {
+        "height": 40,
+        "width": 140
+      },
+      "type": "component"
+    }
+  },
+  "pageOrder": [
+    "page_1772404124436_wc6s6mz3r"
+  ],
+  "pages": {
+    "page_1772404124436_n5je87tzx": {
+      "id": "page_1772404124436_n5je87tzx",
+      "name": "Page 1",
+      "pageNumber": 1
+    },
+    "page_1772404124436_wc6s6mz3r": {
+      "id": "page_1772404124436_wc6s6mz3r",
+      "name": "Page 1",
+      "pageNumber": 1
+    }
+  },
+  "signals": {
+    "sig_1772409989781_2sebtkubb": {
+      "color": "#000000",
+      "id": "sig_1772409989781_2sebtkubb",
+      "name": "GND"
+    },
+    "sig_1772409989997_r76igzlnv": {
+      "color": "#FF0000",
+      "id": "sig_1772409989997_r76igzlnv",
+      "name": "3V3"
+    },
+    "sig_1772409990181_tqcfd62e3": {
+      "color": "#0000FF",
+      "id": "sig_1772409990181_tqcfd62e3",
+      "name": "TX"
+    },
+    "sig_1772409990405_rdn9eo11w": {
+      "color": "#00FF00",
+      "id": "sig_1772409990405_rdn9eo11w",
+      "name": "RX"
+    }
+  },
+  "subassemblyInstances": {},
+  "wireGroups": {},
+  "viewState": {
+    "schematicPagePositions": {
+      "page_1772404124436_wc6s6mz3r": {
+        "bp_1774310201635_f9zgh104v": {
+          "x": 595,
+          "y": 490
+        },
+        "bp_1774310201635_m2hsvtdur": {
+          "x": 400,
+          "y": 490
+        },
+        "bp_1774310287043_snbxggk6z": {
+          "x": 400,
+          "y": 490
+        },
+        "bp_1774310287043_wvmxgh2k5": {
+          "x": 595,
+          "y": 490
+        },
+        "bp_1774313545450_45ywu9awy": {
+          "x": 550,
+          "y": 215
+        },
+        "bp_1774313545450_6u428pzxl": {
+          "x": 330,
+          "y": 215
+        },
+        "comp_1772404313028_2zpu2zohk": {
+          "x": 212.5,
+          "y": 447.5
+        },
+        "comp_1772404410835_axqoa1a4i": {
+          "x": 682.5,
+          "y": 447.5
+        },
+        "comp_1772410362968_4ql8k6j5g": {
+          "x": -35,
+          "y": 445
+        },
+        "comp_1772587909676_i25usbwky": {
+          "x": 682.5,
+          "y": 545
+        },
+        "comp_1774025289580_esfjhr5p3": {
+          "x": 492.5,
+          "y": 655
+        },
+        "comp_1774310201634_0y0va4nda": {
+          "x": 262.5,
+          "y": 490
+        },
+        "comp_1774310201634_8gidfnb5t": {
+          "x": 262.5,
+          "y": 420
+        },
+        "comp_1774310201634_b5sm5uhl6": {
+          "x": 727.5,
+          "y": 490
+        },
+        "comp_1774310201634_wyc46bv8t": {
+          "x": 497.5,
+          "y": 420
+        },
+        "comp_1774310287042_6bnjcfzn8": {
+          "x": 727.5,
+          "y": 490
+        },
+        "comp_1774310287042_mj12mmvi0": {
+          "x": 262.5,
+          "y": 490
+        },
+        "comp_1774310287042_q89295y5j": {
+          "x": 497.5,
+          "y": 420
+        },
+        "comp_1774310287042_ugc1yh0k1": {
+          "x": 262.5,
+          "y": 420
+        },
+        "comp_1774313545450_1vorayt5j": {
+          "x": 80,
+          "y": 25
+        },
+        "comp_1774313545450_6tceniqpx": {
+          "x": 400,
+          "y": 15
+        },
+        "comp_1774313545450_93zpsaj96": {
+          "x": 80,
+          "y": 200
+        },
+        "comp_1774313545450_q3lmej84a": {
+          "x": 745,
+          "y": 195
+        },
+        "comp_1774354595111_l3eyjvbaw": {
+          "x": 532.5,
+          "y": 695
+        }
+      }
+    },
+    "schematicPageSizes": {
+      "page_1772404124436_wc6s6mz3r": {
+        "bp_1774310201635_f9zgh104v": {
+          "height": 50,
+          "width": 100
+        },
+        "bp_1774310201635_m2hsvtdur": {
+          "height": 50,
+          "width": 100
+        },
+        "bp_1774310287043_snbxggk6z": {
+          "height": 50,
+          "width": 100
+        },
+        "bp_1774310287043_wvmxgh2k5": {
+          "height": 50,
+          "width": 100
+        },
+        "bp_1774313545450_45ywu9awy": {
+          "height": 60,
+          "width": 100
+        },
+        "bp_1774313545450_6u428pzxl": {
+          "height": 60,
+          "width": 100
+        },
+        "comp_1772404313028_2zpu2zohk": {
+          "height": 45,
+          "width": 175
+        },
+        "comp_1772404410835_axqoa1a4i": {
+          "height": 45,
+          "width": 185
+        },
+        "comp_1772410362968_4ql8k6j5g": {
+          "height": 40,
+          "width": 140
+        },
+        "comp_1772587909676_i25usbwky": {
+          "height": 40,
+          "width": 185
+        },
+        "comp_1774025289580_esfjhr5p3": {
+          "height": 40,
+          "width": 185
+        },
+        "comp_1774310201634_0y0va4nda": {
+          "height": 50,
+          "width": 65
+        },
+        "comp_1774310201634_8gidfnb5t": {
+          "height": 50,
+          "width": 65
+        },
+        "comp_1774310201634_b5sm5uhl6": {
+          "height": 50,
+          "width": 65
+        },
+        "comp_1774310201634_wyc46bv8t": {
+          "height": 50,
+          "width": 65
+        },
+        "comp_1774310287042_6bnjcfzn8": {
+          "height": 50,
+          "width": 65
+        },
+        "comp_1774310287042_mj12mmvi0": {
+          "height": 50,
+          "width": 65
+        },
+        "comp_1774310287042_q89295y5j": {
+          "height": 50,
+          "width": 65
+        },
+        "comp_1774310287042_ugc1yh0k1": {
+          "height": 50,
+          "width": 65
+        },
+        "comp_1774313545450_1vorayt5j": {
+          "height": 60,
+          "width": 140
+        },
+        "comp_1774313545450_6tceniqpx": {
+          "height": 60,
+          "width": 140
+        },
+        "comp_1774313545450_93zpsaj96": {
+          "height": 60,
+          "width": 140
+        },
+        "comp_1774313545450_q3lmej84a": {
+          "height": 60,
+          "width": 140
+        },
+        "comp_1774354595111_l3eyjvbaw": {
+          "height": 40,
+          "width": 185
+        }
+      }
+    },
+    "schematicPageTapXOffsets": {
+      "page_1772404124436_wc6s6mz3r": {
+        "cond_1772409983131_6pdolhms0:comp_1772404410835_axqoa1a4i": 290,
+        "cond_1772409983131_8hui2hu02:comp_1772404410835_axqoa1a4i": 290,
+        "cond_1772409983131_g8h31hzl7:comp_1772404410835_axqoa1a4i": 290,
+        "cond_1772409983132_pgnne19fh:comp_1772404410835_axqoa1a4i": 290,
+        "cond_1772589328423_mb5nfj7do:comp_1772587909676_i25usbwky": -120,
+        "cond_1772590922971_mvh6imdse:comp_1772587909676_i25usbwky": -120
+      }
+    },
+    "schematicPageJogXOffsets": {
+      "page_1772404124436_wc6s6mz3r": {
+        "cond_1772409983131_6pdolhms0": 20,
+        "cond_1772409983131_8hui2hu02": -20,
+        "cond_1772409983131_g8h31hzl7": 0,
+        "cond_1772409983132_pgnne19fh": 0,
+        "cond_1772589328423_mb5nfj7do": -50,
+        "cond_1772590922971_mvh6imdse": -50,
+        "cond_1774098354693_g3j04s1w0": -25,
+        "cond_1774098354693_s8q62t19l": -25,
+        "cond_1774098354694_mzczu58tw": -25,
+        "cond_1774310201635_54jdp3idu": -5,
+        "cond_1774310201635_7x4hfpmix": -15,
+        "cond_1774310201635_c1ssusrjr": 10,
+        "cond_1774310201635_dkt0jl9ik": 215,
+        "cond_1774310201635_k5ntdw7k1": 10,
+        "cond_1774310201635_o3cicf0vd": -5,
+        "cond_1774310201635_p7tqudyv0": -15,
+        "cond_1774310201635_rndhsqzbl": 15,
+        "cond_1774310201635_xcttdnkyu": 15,
+        "cond_1774310201635_xsu9chzu4": 215,
+        "cond_1774313545450_0wuiylx86": -75,
+        "cond_1774313545450_2uqmj1xx2": 5,
+        "cond_1774313545450_3uh4ccdih": -15,
+        "cond_1774313545450_5yqjzstj0": 5,
+        "cond_1774313545450_9qvze4fgu": -5,
+        "cond_1774313545450_dk3zflj7l": -25,
+        "cond_1774313545450_svhjq19na": 10,
+        "cond_1774313545450_y6zgbv1v4": -25
+      }
+    },
+    "showConductors": {
+      "link_1772987184919_5x9a9as37": true,
+      "link_1772987184919_coy3fezej": true,
+      "link_1772987184919_wqvjdl0ht": true,
+      "link_1774098354691_5oq3szsz5": true
+    },
+    "conductorDisplayMode": "bundles_and_conductors",
+    "gridEnabled": true,
+    "gridSpacing": 5,
+    "snapToGrid": true,
+    "gridOpacity": 0.7
+  }
+}
