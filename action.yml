@@ -7,6 +7,13 @@ branding:
   color: blue
 
 inputs:
+  config:
+    description: >-
+      Path to splice.yml (relative to the repo root). Defaults to `splice.yml`
+      at the repo root. Set this when splice.yml lives alongside the plan files
+      rather than at root (e.g. `wiring/splice.yml`).
+    required: false
+    default: ''
   plan-path:
     description: >-
       Path to the plan JSON (relative to the repo root). If omitted, falls back

@@ -54,6 +54,7 @@ users only need `splice.yml`.
 
 | Input | Description |
 |---|---|
+| `config` | Path to `splice.yml` (defaults to repo root). Use when config lives alongside plan files (e.g. `wiring/splice.yml`) |
 | `plan-path` | Path to plan JSON (overrides `design.plan-path`) |
 | `output-dir` | Output directory (overrides `exports.output-dir`) |
 | `only` | Comma-separated export targets (overrides `exports.formats`) |
