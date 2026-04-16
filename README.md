@@ -1,6 +1,6 @@
 # Splice Plan Export Action
 
-A GitHub Action that renders a splice plan JSON into production-ready exports
+A GitHub Action that renders a Splice CAD plan JSON into production-ready exports
 (PDF, XLSX, CSV). It produces the same outputs as the **Export** menu in
 [splice](https://splice-cad.com), but headlessly, from a plan JSON committed
 to your repo.
