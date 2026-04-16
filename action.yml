@@ -1,5 +1,5 @@
-name: Splice Plan Export
-description: Render splice plan JSONs as PDF, XLSX, and CSV exports.
+name: Splice Design Export
+description: Render splice designs (plan or legacy harness) as PDF, PNG, SVG, XLSX, and CSV exports.
 author: splice-cad
 
 branding:
@@ -10,14 +10,22 @@ inputs:
   config:
     description: >-
       Path to splice.yml (relative to the repo root). Defaults to `splice.yml`
-      at the repo root. Set this when splice.yml lives alongside the plan files
+      at the repo root. Set this when splice.yml lives alongside the design files
       rather than at root (e.g. `wiring/splice.yml`).
     required: false
     default: ''
   plan-path:
     description: >-
-      Path to the plan JSON (relative to the repo root). If omitted, falls back
-      to the `design.plan-path` field in `splice.yml`.
+      Path to the design JSON — plan or legacy harness schema (relative to the
+      repo root). If omitted, falls back to `design.design-path` (or legacy
+      `design.plan-path`) in `splice.yml`.
+    required: false
+    default: ''
+  design-type:
+    description: >-
+      Design type — `plan` or `harness`. If omitted, falls back to
+      `design.type` in `splice.yml` or is auto-detected from the JSON shape
+      (`nodes`+`links` → plan; `bom`+`data.mapping` → harness).
     required: false
     default: ''
   output-dir:
@@ -28,10 +36,21 @@ inputs:
     default: ''
   only:
     description: >-
-      Comma-separated export targets. Valid values:
-        all-pages-pdf, bom-csv, bom-xlsx, bom-pdf, connection-table-xlsx, icd-pdf
-      If omitted, falls back to `exports.formats` in `splice.yml`, or all
-      targets.
+      Comma-separated export targets. If omitted, falls back to
+      `exports.formats` in `splice.yml`, or the default set for the resolved
+      design type.
+      Plan targets: all-pages-pdf, bom-csv, bom-xlsx, bom-pdf,
+      connection-table-xlsx, icd-pdf.
+      Harness targets: schematic-pdf, schematic-png, schematic-svg,
+      physical-all-pages-pdf, physical-pdf, physical-png, physical-svg,
+      bom-csv, bom-xlsx, bom-pdf.
+    required: false
+    default: ''
+  page-mode:
+    description: >-
+      Which view modes to include in the all-pages PDF. Valid values:
+        both (default), layout, schematic
+      Falls back to `exports.page-mode` in `splice.yml`.
     required: false
     default: ''
 

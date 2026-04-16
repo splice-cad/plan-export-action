@@ -26,6 +26,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull --rebase origin main
           git add rendered/
           if git diff --staged --quiet; then
             echo "No changes to rendered/"
