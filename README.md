@@ -93,6 +93,10 @@ Keeps a git history of how your design has evolved visually. Requires
 `permissions: contents: write`.
 
 ```yaml
+concurrency:
+  group: render-plan-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
@@ -109,14 +113,25 @@ jobs:
           git add rendered/
           if git diff --staged --quiet; then
             echo "No changes to rendered/"
-          else
-            git commit -m "chore: update rendered outputs [skip ci]"
-            git push
+            exit 0
           fi
+          git commit -m "chore: update rendered outputs [skip ci]"
+          for i in 1 2 3; do
+            git fetch origin "${{ github.ref_name }}"
+            git rebase "origin/${{ github.ref_name }}" || { git rebase --abort; exit 1; }
+            if git push origin "HEAD:${{ github.ref_name }}"; then
+              exit 0
+            fi
+            echo "Push rejected, retrying ($i/3)..."
+          done
+          echo "Push failed after 3 attempts" >&2
+          exit 1
 ```
 
 The `[skip ci]` in the commit message prevents the commit-back from re-firing
-the workflow infinitely.
+the workflow infinitely. The `concurrency` block collapses overlapping runs
+(e.g. two rapid pushes) to a single completed render. The retry loop handles
+the case where another run pushes between our rebase and push.
 
 ### Attach rendered outputs to a GitHub Release
 
