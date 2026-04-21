@@ -63,3 +63,7 @@ runs:
   # Floats to the latest v0.x image. Pin to a specific version (e.g. :v0.1.0)
   # if you need reproducible renders across tag bumps.
   image: docker://ghcr.io/splice-cad/plan-export-action:v0
+  # Chowns rendered outputs to the runner user so consuming workflows can
+  # git rebase / reset / rm them after the action finishes. Runs even on
+  # cancellation/timeout where the main entrypoint's cleanup wouldn't fire.
+  post-entrypoint: /action/post-cleanup.sh
