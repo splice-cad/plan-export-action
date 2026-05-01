@@ -19,14 +19,14 @@ jobs:
           - sub-harness-a
           - sub-harness-b
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - uses: splice-cad/plan-export-action@v0
         with:
           plan-path: plans/${{ matrix.plan }}.plan.json
           output-dir: rendered/${{ matrix.plan }}
 
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: rendered-${{ matrix.plan }}
           path: rendered/${{ matrix.plan }}
